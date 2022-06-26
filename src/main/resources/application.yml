@@ -1,0 +1,23 @@
+app:
+  smartym:
+    base-url: "http://test.devenv.smartym.by"
+  security:
+    stub-oauth2-user-name: "test"
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          smartym:
+            client-id: HKGzRFKpSVjSpTPQ
+            client-secret: ovnLjsKEEciCxjwmeHZSB
+            redirect-uri: http://localhost:8080/login/oauth2/code/smartym
+            authorization-grant-type: authorization_code
+            scope: aisp
+            provider: smartym
+        provider:
+          smartym:
+            authorization-uri: http://test.devenv.smartym.by/signin
+            token-uri: http://test.devenv.smartym.by/token
+            user-name-attribute: name

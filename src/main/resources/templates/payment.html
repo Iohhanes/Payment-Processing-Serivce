@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Bank Simulation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Payment form</h1>
+<form action="#" th:action="@{/payment}" th:object="${paymentRequest}" method="post">
+    <p>Creditor IBAN: <input type="text" th:field="*{creditorIban}"/></p>
+    <p>Creditor Name: <input type="text" th:field="*{creditorName}"/></p>
+    <p>Amount: <input type="number" step="0.01" min="0" th:field="*{amount}"/></p>
+    <p>Currency: <input type="text" th:field="*{currency}"/></p>
+    <p>Description: <input type="text" th:field="*{description}"/></p>
+    <p><input type="submit" value="Submit"/></p>
+</form>
+</body>
+</html>
+BY20 OLMP 3135 0000 0010 0000 0933.
