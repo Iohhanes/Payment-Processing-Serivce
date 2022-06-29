@@ -22,7 +22,6 @@ import org.springframework.security.oauth2.core.http.converter.OAuth2AccessToken
 import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.session.SimpleRedirectSessionInformationExpiredStrategy;
@@ -37,7 +36,6 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class SecurityConfiguration {
     private final AppProperties appProperties;
-    private final CustomAuthenticationSuccessHandler authenticationSuccessHandler;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
